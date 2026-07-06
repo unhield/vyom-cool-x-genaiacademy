@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VYOM-COOL AI | Urban Heat Decision Intelligence</title>
+    <meta
+      name="description"
+      content="VYOM-COOL AI is a GenAI powered urban heat decision intelligence platform for Ahmedabad and Rajkot."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true">
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13z"></path>
+        <circle cx="12" cy="9" r="2.6"></circle>
+      </symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24">
+        <path d="m12 3 9 5-9 5-9-5 9-5z"></path>
+        <path d="m3 12 9 5 9-5"></path>
+        <path d="m3 16 9 5 9-5"></path>
+      </symbol>
+      <symbol id="icon-thermo" viewBox="0 0 24 24">
+        <path d="M14 14.7V5a4 4 0 0 0-8 0v9.7a6 6 0 1 0 8 0z"></path>
+        <path d="M10 8v9"></path>
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <path d="M4 19V5"></path>
+        <path d="M4 19h16"></path>
+        <path d="M8 16l3-5 4 3 5-8"></path>
+      </symbol>
+      <symbol id="icon-people" viewBox="0 0 24 24">
+        <path d="M16 11a4 4 0 1 0-8 0"></path>
+        <path d="M4 21a8 8 0 0 1 16 0"></path>
+        <path d="M20 8a3 3 0 0 1 2 5"></path>
+        <path d="M4 8a3 3 0 0 0-2 5"></path>
+      </symbol>
+      <symbol id="icon-leaf" viewBox="0 0 24 24">
+        <path d="M21 3C9 4 3 10 3 21c11 0 17-6 18-18z"></path>
+        <path d="M3 21c4-6 8-10 15-14"></path>
+      </symbol>
+      <symbol id="icon-warning" viewBox="0 0 24 24">
+        <path d="M12 3 2 21h20L12 3z"></path>
+        <path d="M12 9v5"></path>
+        <path d="M12 18h.01"></path>
+      </symbol>
+      <symbol id="icon-flask" viewBox="0 0 24 24">
+        <path d="M9 3h6"></path>
+        <path d="M10 3v6L4.5 19A2 2 0 0 0 6.3 22h11.4a2 2 0 0 0 1.8-3L14 9V3"></path>
+        <path d="M7 16h10"></path>
+      </symbol>
+      <symbol id="icon-scale" viewBox="0 0 24 24">
+        <path d="M12 3v18"></path>
+        <path d="M5 6h14"></path>
+        <path d="m6 6-4 7h8L6 6z"></path>
+        <path d="m18 6-4 7h8l-4-7z"></path>
+        <path d="M8 21h8"></path>
+      </symbol>
+      <symbol id="icon-spark" viewBox="0 0 24 24">
+        <path d="M12 2 9 9l-7 3 7 3 3 7 3-7 7-3-7-3-3-7z"></path>
+      </symbol>
+      <symbol id="icon-cloud" viewBox="0 0 24 24">
+        <path d="M17 18H7a5 5 0 1 1 1-9.9A6 6 0 0 1 20 11a3.5 3.5 0 0 1-3 7z"></path>
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <path d="M7 3v4"></path>
+        <path d="M17 3v4"></path>
+        <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+        <path d="M4 10h16"></path>
+      </symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"></circle>
+        <circle cx="12" cy="12" r="5"></circle>
+        <circle cx="12" cy="12" r="1.5"></circle>
+      </symbol>
+      <symbol id="icon-refresh" viewBox="0 0 24 24">
+        <path d="M20 12a8 8 0 1 1-2.3-5.7"></path>
+        <path d="M20 4v6h-6"></path>
+      </symbol>
+      <symbol id="icon-key" viewBox="0 0 24 24">
+        <circle cx="8" cy="15" r="4"></circle>
+        <path d="M12 15h9"></path>
+        <path d="M17 15v-3"></path>
+        <path d="M20 15v-2"></path>
+      </symbol>
+      <symbol id="icon-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+        <path d="M4 16V6a2 2 0 0 1 2-2h10"></path>
+      </symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24">
+        <path d="m22 2-7 20-4-9-9-4 20-7z"></path>
+        <path d="M22 2 11 13"></path>
+      </symbol>
+    </svg>
+
+    <div class="app-shell">
+      <header class="masthead">
+        <div class="brand-block">
+          <span class="brand-kicker">Data Alchemists</span>
+          <h1>VYOM-COOL AI</h1>
+          <p>Urban Heat Decision Intelligence Platform for Ahmedabad and Rajkot</p>
+        </div>
+        <div class="masthead-actions" aria-label="Project summary">
+          <div class="pill status-live">
+            <span></span>
+            Prototype build
+          </div>
+          <div class="leader-card">
+            <span>Team Leader</span>
+            <strong>Raj Joshi</strong>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="control-strip" aria-label="Primary controls">
+          <label class="field">
+            <span><svg><use href="#icon-pin"></use></svg>City</span>
+            <select id="citySelect"></select>
+          </label>
+          <label class="field">
+            <span><svg><use href="#icon-target"></use></svg>Area / Zone</span>
+            <select id="zoneSelect"></select>
+          </label>
+          <label class="field">
+            <span><svg><use href="#icon-calendar"></use></svg>Planning Horizon</span>
+            <select id="horizonSelect">
+              <option value="1">1 Year</option>
+              <option value="3">3 Years</option>
+              <option value="5" selected>5 Years</option>
+              <option value="10">10 Years</option>
+            </select>
+          </label>
+          <div class="field api-state" id="apiState">
+            <span><svg><use href="#icon-spark"></use></svg>Gemini</span>
+            <strong>Demo mode</strong>
+          </div>
+        </section>
+
+        <nav class="tabbar" aria-label="Dashboard sections">
+          <button class="tab-button active" type="button" data-panel="map">
+            <svg><use href="#icon-layers"></use></svg>
+            Intelligence Map
+          </button>
+          <button class="tab-button" type="button" data-panel="scenario">
+            <svg><use href="#icon-flask"></use></svg>
+            Scenario Simulator
+          </button>
+          <button class="tab-button" type="button" data-panel="portfolio">
+            <svg><use href="#icon-scale"></use></svg>
+            Cooling Portfolio
+          </button>
+          <button class="tab-button" type="button" data-panel="assistant">
+            <svg><use href="#icon-spark"></use></svg>
+            AI Decision Copilot
+          </button>
+        </nav>
+
+        <section class="panel active" data-panel="map">
+          <div class="panel-title navy">
+            <svg><use href="#icon-layers"></use></svg>
+            <div>
+              <h2>Urban Heat Intelligence Map</h2>
+              <p>LST, NDVI, population exposure, and built-up intensity fused into CACPI scoring</p>
+            </div>
+          </div>
+
+          <div class="map-toolbar">
+            <span class="toolbar-label">Layers</span>
+            <button class="layer-toggle active" type="button" data-layer="lst">LST</button>
+            <button class="layer-toggle active" type="button" data-layer="ndvi">NDVI</button>
+            <button class="layer-toggle active" type="button" data-layer="population">Population Density</button>
+            <button class="layer-toggle" type="button" data-layer="interventions">Intervention Sites</button>
+          </div>
+
+          <div class="map-grid">
+            <div class="map-stage">
+              <svg id="cityMap" class="city-map" viewBox="0 0 960 620" role="img" aria-label="Urban heat intelligence map"></svg>
+              <div class="map-tools" aria-hidden="true">
+                <button type="button" title="Pan map"><span>+</span></button>
+                <button type="button" title="Zoom in"><span>+</span></button>
+                <button type="button" title="Zoom out"><span>-</span></button>
+                <button type="button" title="Layers"><span>=</span></button>
+              </div>
+              <div class="map-legend">
+                <strong>Heat Risk Level</strong>
+                <span><i class="critical"></i>Critical</span>
+                <span><i class="high"></i>High</span>
+                <span><i class="moderate"></i>Moderate</span>
+                <span><i class="low"></i>Low</span>
+              </div>
+            </div>
+
+            <div class="zone-stack">
+              <div class="selected-zone">
+                <svg><use href="#icon-pin"></use></svg>
+                <div>
+                  <span>Selected Zone</span>
+                  <strong id="selectedZoneLabel"></strong>
+                </div>
+              </div>
+              <div class="metric-grid" id="mapMetrics"></div>
+            </div>
+          </div>
+
+          <div class="insight-band" id="mapInsight">
+            <svg><use href="#icon-spark"></use></svg>
+            <p></p>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="scenario">
+          <div class="panel-title navy">
+            <svg><use href="#icon-flask"></use></svg>
+            <div>
+              <h2>Urban Cooling Scenario Simulator</h2>
+              <p>Pre-implementation cooling impact under combined AI/ML strategy assumptions</p>
+            </div>
+          </div>
+
+          <div class="scenario-layout">
+            <aside class="strategy-panel">
+              <h3>Cooling Strategies</h3>
+              <div id="strategyControls"></div>
+              <button class="primary-action" type="button" id="runSimulation">
+                <svg><use href="#icon-refresh"></use></svg>
+                Run Simulation
+              </button>
+            </aside>
+
+            <div class="scenario-main">
+              <div class="selected-overview">
+                <div class="mini-map-wrap">
+                  <svg id="scenarioMap" class="city-map mini" viewBox="0 0 960 620" role="img" aria-label="Scenario map"></svg>
+                </div>
+                <div class="quick-stat-row" id="scenarioQuickStats"></div>
+              </div>
+
+              <div class="scenario-results">
+                <h3><svg><use href="#icon-chart"></use></svg>Predicted Temperature Reduction</h3>
+                <div id="scenarioTable"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="insight-band" id="scenarioInsight">
+            <svg><use href="#icon-spark"></use></svg>
+            <p></p>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="portfolio">
+          <div class="panel-title navy">
+            <svg><use href="#icon-scale"></use></svg>
+            <div>
+              <h2>Resource-Constrained Cooling Portfolio Optimization</h2>
+              <p>Ranks actions by cooling impact, feasibility, cost, exposure, and long-term resilience</p>
+            </div>
+          </div>
+
+          <div class="constraint-grid">
+            <label class="constraint">
+              <span>Available Budget</span>
+              <strong><output id="budgetOutput">10.00</output> Cr</strong>
+              <input id="budgetRange" type="range" min="2" max="40" value="10" step="0.5">
+            </label>
+            <label class="constraint">
+              <span>Water Availability</span>
+              <select id="waterSelect">
+                <option value="low">Low</option>
+                <option value="moderate" selected>Moderate</option>
+                <option value="high">High</option>
+              </select>
+            </label>
+            <label class="constraint">
+              <span>Land Availability</span>
+              <select id="landSelect">
+                <option value="low" selected>Limited</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
+              </select>
+            </label>
+            <label class="constraint">
+              <span>Population Priority</span>
+              <select id="prioritySelect">
+                <option value="normal">Normal</option>
+                <option value="high" selected>High</option>
+                <option value="critical">Critical</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="portfolio-layout">
+            <div class="portfolio-table">
+              <h3>Recommended Optimal Portfolio</h3>
+              <div id="portfolioTable"></div>
+            </div>
+            <aside class="impact-card" id="portfolioImpact"></aside>
+          </div>
+
+          <div class="roadmap">
+            <h3>Implementation Roadmap</h3>
+            <div id="roadmapSteps"></div>
+          </div>
+
+          <div class="insight-band" id="portfolioInsight">
+            <svg><use href="#icon-spark"></use></svg>
+            <p></p>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="assistant">
+          <div class="panel-title navy">
+            <svg><use href="#icon-spark"></use></svg>
+            <div>
+              <h2>Gemini Decision Desk</h2>
+              <p>Natural-language decision support for city heat mitigation planning</p>
+            </div>
+          </div>
+
+          <div class="assistant-layout">
+            <div class="assistant-config">
+              <h3>Live Gemini API</h3>
+              <label class="field stacked">
+                <span><svg><use href="#icon-key"></use></svg>Google AI Studio API Key</span>
+                <input id="apiKeyInput" type="password" autocomplete="off" placeholder="Paste key for this session">
+              </label>
+              <label class="field stacked">
+                <span>Model</span>
+                <select id="modelSelect">
+                  <option value="gemini-3.5-flash" selected>gemini-3.5-flash</option>
+                  <option value="gemini-flash-latest">gemini-flash-latest</option>
+                  <option value="gemini-2.5-flash">gemini-2.5-flash</option>
+                </select>
+              </label>
+              <button class="secondary-action" type="button" id="saveApiKey">Activate Gemini</button>
+              <div class="api-note">
+                The key is stored only in this browser session. The public repository stays key-free.
+              </div>
+
+              <div class="prompt-chips" id="promptChips"></div>
+            </div>
+
+            <div class="chat-panel">
+              <div class="chat-log" id="chatLog" aria-live="polite"></div>
+              <form class="chat-form" id="chatForm">
+                <textarea id="promptInput" rows="3" placeholder="Ask VYOM-COOL AI for ward priorities, cooling actions, risk explanation, or a submission summary."></textarea>
+                <button class="primary-action icon-only" type="submit" title="Send prompt">
+                  <svg><use href="#icon-send"></use></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="architecture">
+          <div class="panel-title navy">
+            <svg><use href="#icon-cloud"></use></svg>
+            <div>
+              <h2>Google Cloud Blueprint</h2>
+              <p>Prototype now, scalable path for ISRO BAH and GenAI Academy judging</p>
+            </div>
+          </div>
+
+          <div class="blueprint">
+            <div class="blueprint-node">
+              <span>01</span>
+              <strong>Satellite and Civic Data</strong>
+              <p>LST, NDVI, population exposure, built-up density, climate stress, ward boundaries</p>
+            </div>
+            <div class="blueprint-node">
+              <span>02</span>
+              <strong>Cloud Storage</strong>
+              <p>Stores GeoTIFF rasters, CSV ward metrics, scenario outputs, and intervention catalogues</p>
+            </div>
+            <div class="blueprint-node">
+              <span>03</span>
+              <strong>BigQuery Analytics</strong>
+              <p>Aggregates heat features, CACPI ranks, hotspot trends, and portfolio tables</p>
+            </div>
+            <div class="blueprint-node">
+              <span>04</span>
+              <strong>Vertex AI / Gemini</strong>
+              <p>Generates explainable recommendations, natural-language answers, and city action briefs</p>
+            </div>
+            <div class="blueprint-node">
+              <span>05</span>
+              <strong>Cloud Run / GitHub Pages</strong>
+              <p>Deploys a public decision dashboard with free prototype hosting path</p>
+            </div>
+            <div class="blueprint-node">
+              <span>06</span>
+              <strong>Looker / Dashboard Layer</strong>
+              <p>Visualizes maps, risk scores, cooling simulations, and resource optimization outputs</p>
+            </div>
+          </div>
+
+          <div class="evidence-grid">
+            <div>
+              <h3>ISRO BAH Alignment</h3>
+              <ul>
+                <li>Optimises urban heat mitigation and cooling strategies using AI/ML.</li>
+                <li>Detects heat hotspots and calculates zone-level heat vulnerability.</li>
+                <li>Simulates cooling interventions before implementation.</li>
+                <li>Prioritizes interventions using impact, feasibility, cost, and exposure.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>GenAI Academy Alignment</h3>
+              <ul>
+                <li>Ingests and analyzes data from multiple sources.</li>
+                <li>Enables natural-language interaction with heat-risk data.</li>
+                <li>Generates recommendations, rankings, alerts, and planning briefs.</li>
+                <li>Shows scalable Google Cloud architecture and practical UX.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="submission">
+          <div class="panel-title navy">
+            <svg><use href="#icon-copy"></use></svg>
+            <div>
+              <h2>Submission Pack</h2>
+              <p>Ready text for Hack2skill, GitHub, PPT, and video script</p>
+            </div>
+          </div>
+
+          <div class="submission-grid">
+            <article class="copy-card">
+              <h3>Team Description</h3>
+              <p id="teamDescription">
+                Data Alchemists convert satellite, climate, and civic data into AI decision tools for safer cities. VYOM-COOL AI detects heat hotspots, simulates cooling strategies, and ranks interventions for climate-resilient communities.
+              </p>
+              <button class="copy-button" type="button" data-copy="teamDescription">
+                <svg><use href="#icon-copy"></use></svg>
+                Copy
+              </button>
+            </article>
+            <article class="copy-card">
+              <h3>Brief Description</h3>
+              <p id="briefDescription">
+                VYOM-COOL AI is a GenAI-powered urban heat decision intelligence platform for city planners and communities. It combines satellite-derived land surface temperature, vegetation, population exposure, and built-up indicators to identify heat hotspots, explain risk drivers, simulate cooling interventions, and recommend priority actions for Ahmedabad and Rajkot.
+              </p>
+              <button class="copy-button" type="button" data-copy="briefDescription">
+                <svg><use href="#icon-copy"></use></svg>
+                Copy
+              </button>
+            </article>
+            <article class="copy-card wide">
+              <h3>Demo Storyline</h3>
+              <ol>
+                <li>Open the Intelligence Map and select Ahmedabad Ward A.</li>
+                <li>Show CACPI score, heat drivers, exposed population, and LST risk.</li>
+                <li>Run the Scenario Simulator with combined cooling strategies.</li>
+                <li>Open the Portfolio Optimizer and explain the recommended sequence.</li>
+                <li>Ask Gemini for a ward action brief and show the generated recommendation.</li>
+              </ol>
+            </article>
+            <article class="copy-card wide">
+              <h3>Submission Checklist</h3>
+              <div class="checklist">
+                <span>Working prototype link</span>
+                <span>Public GitHub repository</span>
+                <span>PPT or deck</span>
+                <span>Demo video under 3 minutes</span>
+                <span>Brief solution description</span>
+                <span>Team: Data Alchemists, Raj Joshi</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
